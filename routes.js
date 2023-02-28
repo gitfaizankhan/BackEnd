@@ -32,6 +32,7 @@ const requestHandler = (request, response)=>{
                 return response.end();
             }); // write file sync stand for synchronous
         });
+        
     }
     response.setHeader('Content-Type', 'text/html');
     response.write('<html>');
@@ -43,5 +44,18 @@ const requestHandler = (request, response)=>{
 }
 
 
+
+//  +++++++++++++++++++++++ differebt types of export
+
+
 // global obeject export by node.js
-module.exports = requestHandler;
+// module.exports = requestHandler;
+
+
+module.exports = {
+    handler: requestHandler,
+    someText: 'Some hard coded text'
+}
+
+// module.exports.handler = requestHandler;
+// exports.handler = requestHandler;
