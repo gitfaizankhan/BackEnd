@@ -5,8 +5,9 @@
 
     <body>
         <%- include('includes/navigation.ejs') %>
-            <main>
-                <form class="product-form" id="form" action="../routes/contact" method="POST">
+            <main id="form">
+                <h1 style="text-align: center; font-weight: bold;">Contact Us</h1>
+                <form class="product-form" action="../routes/contact" method="POST">
                     <div class="form-control">
                         <label for="title">First Name</label>
                         <input type="text" name="fname" id="fname" placeholder="First Name" required>
